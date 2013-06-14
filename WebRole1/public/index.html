@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<!--       Developed by @RobertDaleSmith founder of @MoteLabs.           
+           ____    ___  @FlingerCo / founders@flinger.co                                                       
+          /\  _`\ /\_ \    __                                                             
+          \ \ \L\_\//\ \  /\_\    ___      __      __   _ __      ___    ___   
+           \ \  _\/ \ \ \ \/\ \ /' _ `\  /'_ `\  /'__`\/\`'__\   /'___\ / __`\ 
+            \ \ \/   \_\ \_\ \ \/\ \/\ \/\ \L\ \/\  __/\ \ \/ __/\ \__//\ \L\ \
+             \ \_\   /\____\\ \_\ \_\ \_\ \____ \ \____\\ \_\/\_\ \____\ \____/
+              \/_/   \/____/ \/_/\/_/\/_/\/___L\ \/____/ \/_/\/_/\/____/\/___/ 
+                                           /\____/                             
+                                           \_/__/                  (C)(TM)2013
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Flinger.co</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="title" 		  content="Flinger.co - Your Own TV Channel" />
+        <meta name="copyright" 	  content="MoteLabs.com - 2013" />
+        <meta name="email" 		  content="contact@flinger.co" />
+        <meta name="description" content="Fling videos to any screen from any screen with Flinger.co" />
+        <meta name="viewport" content="width=320, width=device-width, initial-scale=1, maximum-scale=1" /> <!-- This will force the device viewport to maintain the correct scale -->
+        <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- This will remove the Safari web browsers address bar & bookmarks bar giving your web page a native appearance -->
+        
+        <!-- Windows 8 Pin to Start Tile Icon -->
+        <meta name="application-name" content="Flinger.co Remote" />
+        <meta name="msapplication-TileImage" content="tile-image-144.png"/>
+        <meta name="msapplication-TileColor" content="#f15e62"/>
+
+        <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+        
+        <!-- Opera Speed Dial Favicon -->
+        <link rel="icon" type="image/png" href="fav-icon-32.png" />
+        <!-- Standard Favicon -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <!-- For iPhone 4 Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+        <!-- For iPad: -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+        <!-- For iPhone: -->
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57x57-precomposed.png">
+        
+        <meta property="fb:app_id" content="271277383008651" />
+        <meta property="fb:admins" content="537257174" />  
+        <meta property="og:title" content="Flinger.co - Your Own TV Channel" />
+        <meta property="og:url" content="http://flinger.co/" >
+        <meta property="og:site_name" content="Flinger.co" />
+        <meta property="og:description" content="Fling videos to any screen from any screen with Flinger.co." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="icon_512.png" />
+
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-css-transform.js"></script>
+        <script type="text/javascript" src="js/jquery-animate-css-rotate-scale.js"></script>
+
+        <script type="text/javascript" src="js/bcsocket.js"></script>
+        <script type="text/javascript" src="js/share.js"></script>
+        <script type="text/javascript" src="js/json.js"></script>
+        <script type="text/javascript" src="js/slider.js"></script>
+
+        <script type="text/javascript" src="js/screenfull.js"></script>
+        <script type="text/javascript" src="http://public.slidesharecdn.com/javascripts/swfobject_playerapi.js"></script>
+        <script type="text/javascript" src="js/froogaloop.min.js"></script>
+
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/responsive.js"></script>
+
+        <!-- UserVoice JavaScript SDK (only needed once on a page) -->
+        <script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='http://widget.uservoice.com/Wd29vq5vZgJBgpOtcTPw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>
+        <!-- GooglePlus JavaScript init stuff -->
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+    </head>
+    <body ontouchmove="BlockMove(event);">
+
+        <div id="fb-root"></div>
+	    <script>(function(d, s, id) {
+  			    var js, fjs = d.getElementsByTagName(s)[0];
+  			    if (d.getElementById(id)) return;
+  			    js = d.createElement(s); js.id = id;
+  			    js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=271277383008651";
+  			    fjs.parentNode.insertBefore(js, fjs);
+		    }(document, 'script', 'facebook-jssdk'));
+	    </script>
+
+
+
+
+        <section id="container" class="container">  
+        
+            <div id="ytplayer"></div>
+
+            <div id="vimeoPlayerContainer"></div>
+
+            <div id="main_player_overlay">
+                <textarea id="data" onkeydown="if(event.keyCode==13){return false;}">Connecting, please stand by...</textarea>
+            
+                <iframe id="iframeContainer"></iframe>
+                <div id="slideContainer">
+                    <div id="slidePlayer">
+                        You need Flash player 8+ and JavaScript to view the slideshow player.
+                    </div>
+                </div>
+
+                <div id="volume_osd_main">
+                
+                    <div id="volume_osd_container">
+                        <div id="volume_osd_icon"></div>
+                        <div id="volumeOSDSlider" class="volumeOSDSlider" data-role="slider"></div>
+                        <div id="volume_percent">0</div>
+                    </div>
+
+                </div>
+
+                <div id="new_channel_overlay">
+                    
+                    <div id="new_connect_spacer"></div>
+                    <div id="new_connect_details_wrapper">
+                        <div id="new_channel_title">CHANNEL CODE:</div>
+                        <div id="phone_code_container">
+                            <div id="phone_code_hash">-</div>
+                            <div id="phone_code_url"></div>
+                        </div>
+                        <div id="new_ch_fling_details_title">FLING:</div>
+                        <div id="new_ch_fling_details">YOUTUBE<br>VIMEO<br>MP4<br>SLIDESHARE<br>IMAGES<br>& MANY WEBSITES</div>
+                        <div id="new_ch_device_details_title">DEVICES:</div>
+                        <div id="new_ch_device_details">SMART TV<br>SMART PHONE<br>TABLET<br>NOTEBOOK<br>DESKTOP<br>or ANY BROWSER!</div>
+                        <div id="new_ch_more_details">For more control go to <div id="new_ch_more_details_url">remote.flinger.co</div> & enter the channel code</div>
+                        
+
+                    </div>
+                    <div class="version_container">PREVIEW v.1.0.5.4</div> 
+
+                </div>            
+
+                <div id="chat_conversation_container"></div>
+
+                <div id="cornerLogo"></div>
+
+                <div id="corner_ad_more_details"></div>
+
+                <div id="videoOverLay" onclick="playPauseVideo();" ondblclick="screenfull.toggle(document.body);"></div>
+                
+
+                <div id="timeoutMessage">
+                    <div id="timeoutMsgTitle">Oh no..</div>
+                    <div id="timeoutMsgDetails">Connection Timed Out</div>
+                    <div id="timeoutMsgCloseBtn" onclick="document.getElementById('timeoutMessage').style.display='none';">x</div>
+                    <button name="reconnect" id="reconnect_button" type="button">RECONNECT</button>
+                </div>
+
+                <div id="hud_top_container">
+                    <div id="main_info_container" onclick="playPauseVideo();" ondblclick="screenfull.toggle(document.body);">
+                        <div id="video_thumbnail"><img src="images/flingerco_logo.png" alt="Flinger.co" id="video_thumb_image"></div>
+                        <div id="video_title">Flinger.co</div>
+                    
+                        <div id="video_details">
+                            <div id="video_uploader">Your Own Internet TV Channel</div>
+                            <div id="video_uploaded"></div>
+                            <div id="video_views"></div>
+                            <div id="video_provider"></div>
+                        </div>
+
+
+                        
+
+                    </div>
+                    <!--a id="shareChannelBtn" class="share_Channel_Btn" title="Invite others to watch together."></a>
+                    <a id="settingsBtn" class="settings_Btn" title="Preferences"></a-->
+                </div>
+
+
+
+
+                <div id="controls_wrapper">
+
+
+
+                    <div id="controls_playback_wrapper">
+                        <a id="playVideoBtn" class="play_Video_Btn" onclick="playPauseVideo()" title="Play/Pause"></a>
+                        <a id="next_Video_btn" class="next_Video_btn" title="Next on Que"></a>
+                        <a id="muteVideoBtn" class="volmax_Video_Btn" title="Mute Volume"></a>
+                        <div class="volumeSlider_holder"><div id="volumeSlider" class="volumeSlider" data-role="slider"></div></div>
+                    </div>
+                    <div id="slide_controls">
+                        <a id="first_slide_btn" class="first_slide_btn" title="Go To First Slide"></a>
+                        <a id="prev_slide_btn"  class="prev_slide_btn" title="Go To Previous Slide"></a>
+                        <a id="next_slide_btn"  class="next_slide_btn" title="Go To Next Slide"></a>
+                        <a id="last_slide_btn"  class="last_slide_btn" title="Go To Last Slide"></a>
+                        <a id="next_Video_btn_2" class="next_Video_btn_2" title="Next on Queue"></a>
+                    </div>
+
+
+
+                    <div id="controls_options_wrapper">
+                        <a id="menuBtn" class="menu_Btn" title="more options.."></a>
+                        <a id="feedbackBtn" class="feedback_Btn" title="Leave feedback."></a>
+                        <a id="inviteShareBtn" class="invite_Btn" title="Invite others to this channel."></a>
+                        <a id="fullScreenBtn" class="full_Screen_Btn" title="Full Screen (F11)"></a>
+                        
+                        
+                        
+                    </div>
+
+
+
+                    <div id="controls_address_wrapper">
+                        
+                        <input id="addressBarTextArea" onkeypress="if (event.keyCode == 13) {document.getElementById('fling_button').click(); document.getElementById('addressBarTextArea').blur();}" value="" onfocus="addressBarTakesFocus();" onblur="addressBarLoosesFocus();" onMouseUp="addressBarMouseUp();" spellcheck="false" title="Fling YouTube URLs or Search YouTube" placeholder="http://">
+                        <div id="addressBar_favicon"><img src="images/favicon_placeholder.png" alt="fav_icon" id="address_fav_icon"></div>
+                        <div id="fling_button_color_fix"></div>
+                        <a id="fling_button" onclick="flingURI();" title="Fling URL"></a>
+                    </div>
+
+
+
+                    <div id="controls_channel_wrapper">
+
+                        <div id="viewer_count" class="hud_counter">
+                            <div id="viewer_count_total" class="hud_counter_total">-</div>
+                            <div id="viewer_count_title" class="hud_counter_title">VIEWERS</div>
+                        </div>
+                        <div id="remote_count" class="hud_counter">
+                            <div id="remote_count_total" class="hud_counter_total">-</div>
+                            <div id="remote_count_title" class="hud_counter_title">REMOTES</div>
+                        </div>
+                        <div id="channel_code" class="hud_counter">
+                            <div id="channel_code_total" class="hud_counter_total">-</div>
+                            <div id="channel_code_title" class="hud_counter_title">CHANNEL CODE</div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div id="invite_buttons_container">
+
+                    <div class="invite_viewer_link_container"><div class="invite_link_title">VIEWER LINK</div><div class="invite_link" id="invite_buttons_url">flinger.co</div><div id="invite_close_button">x</div></div>
+                    <div class="invite_remote_link_container"><div class="invite_link_title">REMOTE LINK</div><div class="invite_link" id="invite_buttons_url2">remote.flinger.co/#</div></div>
+                            
+                    <div id="invite_button_new_container">
+                        <div class="invite_button_new" id="invite_button_fb"><div class="invite_button_new_icon"></div><div class="invite_button_new_text">SHARE</div></div>
+                        <div class="invite_button_new" id="invite_button_tw"><div class="invite_button_new_icon"></div><div class="invite_button_new_text">TWEET</div></div>
+                        <div class="invite_button_new" id="invite_button_gp"><div class="invite_button_new_icon"></div><div class="invite_button_new_text">SHARE</div></div>
+                    </div>                            
+                                                        
+                </div>
+
+                <div id="menu_container">
+                    <a id="inviteMenuBtn" class="option_Menu_Btn" title="Don't watch alone!">Invite Others</a>
+                    <a id="fullScrMenuBtn" class="option_Menu_Btn" title="Full Screen (F11)">Full Screen</a>
+                    <a id="feedbackMenuBtn" class="option_Menu_Btn" title="Feedback & Support">Feedback</a>
+                    <a id="makeMainMenuBtn" class="option_Menu_Btn makeMainMenuBtn" title="Set as Main Screen">Main Screen</a>
+                    <a id="powerOffMenuBtn" class="option_Menu_Btn" title="Disconnect">Power Off</a>
+                </div>
+
+
+
+                <div id="timeSlider_holder" class="timeSlider_holder">
+                    <div id="fractionLoaded"></div>
+                    <div id="timeSlider" class="timeSlider" data-role="slider" data-param-accuracy="0.1"><div id="timer_current"></div><div id="timer_duration"></div></div>
+                </div>
+        
+                
+
+                <!--THIS-->
+                <div id="splash_container">
+                    
+                    <div id="splash_container_back"></div>
+                    <div id="splash_container_back2"></div>
+
+
+                    <div id="splash_main_content">
+                        <div id="logo_animation_container">
+                            <div id="logo_container">
+                                <img src="images/boomerang_1.svg" class="booms" id="boom_1" alt="boom_1">
+                                <img src="images/boomerang_2.svg" class="booms" id="boom_2" alt="boom_2">
+                                <img src="images/boomerang_3.svg" class="booms" id="boom_3" alt="boom_3">                            
+                            </div>
+                        </div>
+
+                        <div id="flinger_co_text_logo_wrapper"><img src="images/flinger_co_text_logo.svg" alt="FLINGER.CO - YOUR OWN TV CHANNEL" id="flinger_co_text_logo"></div>
+                        <!--div id="flinger_co_text_sub">YOUR OWN TV CHANNEL</div-->
+                        <div id="flinger_co_text_sub2">Control and send video content between any two screens</div>
+
+
+                        <div id="get_remote_learn_more">
+                            <div id="get_the_remote_btn">GET THE REMOTE</div>
+                            <div id="learn_more_btn"><div id="learn_more_btn_initial">L</div>EARN <div id="learn_more_btn_initial">M</div>ORE &nbsp;</div>
+                        </div>
+                    
+                        <div id="get_remote_apps">                            
+                            <a href="http://www.windowsphone.com/en-us/store/app/flinger-co-remote/2f650882-776e-4d95-9cc1-d0e5951eae97" target="_blank"><img id="windows_phone_store_button" class="store_img" src="images/windows_phone_store.png" alt="Flinger.co on Windows Phone Store"></a>
+                            <a href="http://apps.microsoft.com/windows/en-us/app/flinger-co/cbd903ef-7b34-4eff-a8a1-ae3fd5fb61f3" target="_blank"><img id="windows_store_button" class="store_img" src="images/windows_store.png" alt="Flinger.co on Windows Store"></a>
+                            <img id="chrome_web_store_button" class="store_img" src="images/chrome_web_store.png" alt="Flinger.co on Chrome Web Store">
+                            <img id="play_store_button" class="store_img" src="images/google_play_store.png" alt="Android app on Google Play">
+                            <img id="html_web_app_button" class="store_img" src="images/html_web_app.png" alt="Flinger.co on HTML Web App">
+                        </div>
+                    </div>
+
+
+                    <div id="status_container">START A CHANNEL</div>
+                    <div id="pairing_container">
+                        <div id="input_container">
+                            <input type="text" id="hash_input" maxlength="6" placeholder="Enter channel code">
+                            <button id="connect_button">CONNECT</button>
+                        </div>
+                        <div id="start_new_ch_container">
+                            <div id="watch_or_text">or</div>
+                            <button id="start_new_button">CREATE NEW CHANNEL</button>
+                        </div>
+
+                    </div>
+                    <div id="splash_footer_container">
+                        <div id="copyright_container">© 2013 <a href="http://motelabs.com/" class="copyright_link">Mote Labs</a></div>
+
+                        <div id="footer_menu_container">
+                            <a href="http://twitter.com/flingerco" class="copyright_link" target="_blank">@FLINGERCO</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            
+                            <a href="http://blog.flinger.co/" class="copyright_link">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            
+                            <a onclick="showClassicWidget();" class="copyright_link">FEEDBACK</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <!--a href="http://flinger.co/help" class="copyright_link">HELP</a>&nbsp;&nbsp;&nbsp;&nbsp;-->
+                            <a href="http://flinger.co/advertise-on-flinger" class="copyright_link">ADVERTISE</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="http://flinger.co/about" class="copyright_link">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="http://flinger.co/support" class="copyright_link">SUPPORT US</a>
+                        </div>
+                    </div>
+
+                    
+
+                    
+
+                       
+                </div>
+
+        
+                <!--div id="footer_bar">
+                    <div id="footer_bar_left_side">
+                        &nbsp;&nbsp; 
+                        © <a href="http://motelabs.com/" class="footer_link">Mote Labs, Inc</a>.
+                
+                    </div>
+                    <div id="footer_bar_right_side">
+                        <div style="display: inline-block;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="http://twitter.com/flingerco/" target="_blank" class="footer_link">@flingerco</a> 
+                            &nbsp;&nbsp;&nbsp;&nbsp; 
+                        </div>
+                        <div style="display: inline-block;">
+                            <a href="http://blog.flinger.co/" class="footer_link">Blog</a>  
+                            &nbsp;&nbsp;&nbsp;&nbsp; 
+                        </div>
+                        <div style="display: inline-block;">
+                            <a href="http://flinger.co/advertise-on-flinger/" class="footer_link">Advertise</a>   
+                            &nbsp;&nbsp;&nbsp;&nbsp; 
+                        </div>
+                        <div style="display: inline-block;">
+                            <a href="" class="footer_link">Feedback</a>
+                            &nbsp;&nbsp;
+                        </div>
+                    </div>
+                </div>-->
+
+
+        
+            </div>
+            
+        
+
+        </section>
+        <a href="https://plus.google.com/107129845099957054722?rel=author"></a>
+
+        <script>makeMainResponsive();</script>
+
+
+
+
+
+
+
+        
+
+
+    </body>
+</html>

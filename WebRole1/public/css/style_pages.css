@@ -1,0 +1,728 @@
+
+/*         Developed by @RobertDaleSmith founder of @MoteLabs.           
+           ____    ___  @FlingerCo / founders@flinger.co                                                       
+          /\  _`\ /\_ \    __                                                             
+          \ \ \L\_\//\ \  /\_\    ___      __      __   _ __      ___    ___   
+           \ \  _\/ \ \ \ \/\ \ /' _ `\  /'_ `\  /'__`\/\`'__\   /'___\ / __`\ 
+            \ \ \/   \_\ \_\ \ \/\ \/\ \/\ \L\ \/\  __/\ \ \/ __/\ \__//\ \L\ \
+             \ \_\   /\____\\ \_\ \_\ \_\ \____ \ \____\\ \_\/\_\ \____\ \____/
+              \/_/   \/____/ \/_/\/_/\/_/\/___L\ \/____/ \/_/\/_/\/____/\/___/ 
+                                           /\____/                             
+                                           \_/__/                  (C)(TM)2013
+*/
+
+@font-face {
+    font-family: "Eurostile_LT_Medium";
+    src: url("../font/Eurostile_LT_Medium.eot");
+    src: local("☺"),
+    url("../font/Eurostile_LT_Medium.woff") format("woff"),
+    url("../font/Eurostile_LT_Medium.ttf") format('truetype')
+}
+@font-face {
+    font-family: "Eurostile_LT_Demi";
+    src: url("../font/Eurostile_LT_Demi.eot");
+    src: local("☺"),
+    url("../font/Eurostile_LT_Demi.woff") format("woff"),
+    url("../font/Eurostile_LT_Demi.ttf") format('truetype')
+}
+@font-face {
+    font-family: "Eurostile_LT_Demi_Oblique";
+    src: url("../font/Eurostile_LT_Demi_Oblique.eot");
+    src: local("☺"),
+    url("../font/Eurostile_LT_Demi_Oblique.woff") format("woff"),
+    url("../font/Eurostile_LT_Demi_Oblique.ttf") format('truetype')
+}
+@font-face {
+    font-family: "Eurostile_LT_Bold_Oblique";
+    src: url("../font/Eurostile_LT_Bold_Oblique.eot");
+    src: local("☺"),
+    url("../font/Eurostile_LT_Bold_Oblique.woff") format("woff"),
+    url("../font/EurostileLTStd-BoldOblique.ttf") format('truetype')
+}
+
+body {
+    background-color: #fafafa;
+}
+
+h2 {
+    color: #838f94;
+    margin-top: 3px;
+    font-size: 20px;
+}
+
+a {
+    color: #e65f53;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    color: #bcc3cd;
+}
+
+#main_container {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+}
+
+#header_container {
+    display: inline-block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-width: 320px;
+    height: 85px;
+    background-color: #292c36;
+    z-index: 22;
+}
+
+#social_container {
+    display: inline-block;
+    position: absolute;
+    top: 85px;
+    left: 0px;
+    width: 100%;
+    min-width: 320px;
+    height: 124px;
+    background-color: #f4f4f4;
+    z-index: 21;
+    overflow: hidden;
+    background-image: url("http://flinger.co/images_pages/social_quote_bg.png");
+    background-repeat: no-repeat;
+}
+
+#side_bar_container {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 240px;
+    height: 100%;
+    background-color: #e46054;
+    z-index: 20;
+}
+
+#main_body_container {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 100%;
+}
+
+#footer_container {
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #2a2c36;
+    z-index: 20;
+    
+    font-family: "Eurostile_LT_Demi";
+    font-size: 11px;
+    color: #8a90b4;
+}
+
+
+
+
+/*Header Stuff*/
+#flinger_pages_logo {
+
+    display: inline-block;
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    border: 0px;
+
+}
+
+#main_menu {
+    
+}
+
+.header_menu {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 85px;
+    line-height: 85px;
+    font-family: "Eurostile_LT_Demi";
+    font-size: 11px;
+    padding-right: 26px;
+    z-index: 25;
+}
+
+.header_menu a {
+    display: inline-block;
+    position: relative;
+    height: 85px;
+    line-height: 85px;
+    text-decoration: none;
+    color: #8a90b4;
+    padding-left: 34px;
+}
+.header_menu a:hover {
+    color: #f4f4f4;
+
+}
+.header_menu a:active {
+    color: #e65f53;
+}
+
+
+.phone_menu {
+    display: none;
+    position: fixed;
+    top: 85px;
+    left: 0px;
+    
+    width: 100%;
+    line-height: 45px;
+    font-family: "Eurostile_LT_Demi";
+    font-size: 11px;
+    padding-right: 26px;
+    z-index: 30;
+    background-color: #292c36;
+}
+
+.phone_menu a {
+    display: block;
+    position: relative;
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    text-decoration: none;
+    color: #8a90b4;
+    padding-left: 34px;
+    
+    border-style: solid;
+    border-width: 0px;
+    border-top-color: rgba(138, 144, 180, 0.2);
+    border-top-width: 1px;
+}
+.phone_menu a:hover {
+    color: #f4f4f4;
+    background-color: rgba(230, 95, 83, 0.60);
+
+}
+.phone_menu a:active {
+    color: #f4f4f4;
+    background-color: #e65f53;
+}
+
+
+
+
+/*Footer Stuff*/
+#copyright_container {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-left: 20px;
+}
+#copyright_container a {
+    display: inline-block;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: #8a90b4;
+}
+#copyright_container a:hover {
+    color: #f4f4f4;
+
+}
+#copyright_container a:active {
+    color: #e65f53;
+}
+
+
+/*Social Container Stuff*/
+
+.social_network_link {
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #e66154;
+    cursor: pointer;
+}
+.social_network_link:hover {
+    background-color: rgba(230, 97, 84, 0.75);
+}
+
+.social_network_link:active {
+    background-color: rgba(41, 44, 54, 0.8);
+}
+
+#facebook_social_link {
+    top: 0px;
+    right: 100px;
+    
+    background-image: url("http://flinger.co/images_pages/social_link_icon_facebook.png");
+}
+
+#twitter_social_link {
+    top: 0px;
+    right: 20px;
+    
+    background-image: url("http://flinger.co/images_pages/social_link_icon_twitter.png");
+}
+
+#googleplus_social_link {
+    top: 0px;
+    right: 60px;
+    
+    background-image: url("http://flinger.co/images_pages/social_link_icon_googleplus.png");
+}
+
+#latest_twitter_Tweet {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 102px;
+    
+    font-family: "Eurostile_LT_Demi_Oblique";
+    font-size: 1.188em;
+    color: #bcc3cd;
+
+}
+
+#latest_twitter_Tweet a {
+    color: #bcc3cd;
+    text-decoration: none;
+}
+#latest_twitter_Tweet a:hover {
+    text-decoration: underline;
+}
+#latest_twitter_Tweet a:active {
+    color: #e65f53;
+}
+
+#twitter_username_link {
+    display: inline-block;
+    position: absolute;
+    right: 36px;
+    bottom: 20px;
+    color: #e55f53;
+    
+    font-family: "Eurostile_LT_Demi";
+    font-size: 13px;
+    text-decoration: none;
+}
+#twitter_username_link:hover {
+    color: rgba(230, 97, 84, 0.75);
+}
+#twitter_username_link:active {
+    color: #292c36;
+}
+
+#side_bar_page_title {
+
+    position: absolute;
+    display: inline-block;
+    top: 240px;
+    left: 20px;
+    font-family: "Eurostile_LT_Demi";
+    font-size: 25px;
+    color: #fafafa;
+}
+
+#side_bar_dot_co_proud {
+
+    position: absolute;
+    display: inline-block;
+    bottom: 50px;
+    left: 25px;
+    font-family: "Eurostile_LT_Demi";
+    font-size: 25px;
+    color: #fafafa;
+}
+
+
+#main_content_container {
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    left: 0px;
+    
+    max-width: 880px;
+    
+    padding-left:   240px;
+    padding-top:    209px;
+    padding-bottom: 40px;
+    
+    overflow-x: hidden;
+    background-color: #fafafa;
+}
+
+
+
+
+/*Blog Post Stuff*/
+.blog_post {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.blog_post_date {
+    display: block;
+    position: relative;
+    height: 50px;
+    line-height: 70px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #d4d4d4;
+    font-size:14px;
+    padding-left: 100px;
+    vertical-align: bottom;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.blog_post_title {
+    display: block;
+    position: relative;
+    height: 56px;
+    line-height: 56px;
+    font-family: "Eurostile_LT_Demi";
+    color: #454f54;
+    font-size:25px;
+    background-color: #f4f4f4;
+    padding-left: 100px;
+    padding-right: 20px;
+    margin-right: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.blog_post_title a {
+    color: #454f54;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.blog_post_title a:hover {
+    text-decoration: underline; 
+}
+.blog_post_title a:active {
+    color: #e65f53;
+}
+
+.blog_post_title p {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.blog_post_body {
+    display: block;
+    position: relative;
+    font-family: "Eurostile_LT_Medium";
+    color: #6b7578;
+    font-size:14px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.blog_post_body p a {
+    color: #aeadae;
+    text-decoration: none;
+}
+.blog_post_body p a:hover {
+    text-decoration: underline; 
+}
+.blog_post_body p a:active {
+    color: #e65f53;
+}
+
+.blog_post_tags {
+    display: block;
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #aeadae;
+    font-size:14px;
+    height: 54px;
+    line-height: 54px;
+    padding-left: 100px;
+    margin-right: 80px;
+    overflow: hidden;
+    z-index: 20;
+}
+
+.blog_post_tags_line_sep {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 54px;
+    width: 100%;
+    padding-left: 100px;
+    margin-right: 80px;
+    border-style: solid;
+    border-width: 0px;
+    border-top-width: 3px;
+    border-top-color: #f4f4f4;
+    z-index: -1;
+}
+
+.blog_post_tags a {
+    color: #aeadae;
+    text-decoration: none;
+    margin-right: 20px;
+    z-index: 20;
+}
+.blog_post_tags a:hover {
+    text-decoration: underline; 
+}
+.blog_post_tags a:active {
+    color: #e65f53;
+}
+
+
+
+/*Phone Menu Stuff*/
+#main_menu_button {
+    position: absolute;
+    display: none;
+    top: 50%;
+    margin-top: -22.5px;
+    right: 20px;
+    height: 45px;
+    width: 65px;
+    background-image: url("http://flinger.co/images/main_menu_icon.png");
+    
+    cursor: pointer;
+    background-color: #292c36;
+}
+#main_menu_button:hover {
+    background-color: rgba(230, 96, 84, 0.50);
+    background-image: url("http://flinger.co/images/main_menu_icon_hover.png");
+}
+#main_menu_button:active {
+    background-color: #d35b51;
+    background-image: url("http://flinger.co/images/main_menu_icon_hover.png");
+}
+
+
+
+.pagination_link {
+    display: inline-block;
+    position: relative;
+    color: #aeadae;
+    text-decoration: none;
+    margin: 20px;
+}
+.pagination_link:hover {
+    text-decoration: underline; 
+}
+.pagination_link:active {
+    color: #e65f53;
+}
+
+input {
+    display: inline-block;
+    position: relative;
+    border-style: solid;
+    border-color: #dcdde4;
+    border-width: 2px;
+    border-left-width: 5px;
+    height: 36px;
+    width: 340px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #454f54;
+}
+
+textarea {
+    display: inline-block;
+    position: relative;
+    border-style: solid;
+    border-color: #dcdde4;
+    border-width: 2px;
+    border-left-width: 5px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #454f54;
+    
+    height: 120px;
+    width: 335px;
+}
+
+label {
+    display: inline-block;
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: oblique;
+    color: #96a0a4;
+    font-size: 16px;
+    
+    margin-top: 15px;
+}
+
+
+
+#submit_button {
+    display: inline-block;
+    position: relative;
+
+    
+    width:120px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #3d3d4d;
+    border: 0px;
+    
+    font-size: 14px;
+    color: #fff;
+    font-family: "Eurostile_LT_Medium";
+    padding: 0px;
+    cursor: pointer;
+    
+    margin-top: 30px;
+}
+#submit_button:hover {
+    background-color: #595c70;
+}
+#submit_button:active {
+    background-color: rgba(89, 92, 112, 0.80);
+}
+
+
+
+
+/*Payment stuff*/
+.paySlider_holder{
+    display:block;
+    position: relative;
+    
+    width: 100%;
+    height: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.paySlider {
+    width: auto;
+    height: 10px;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-linear-gradient(left, #FFAAAA 0%, #AAFFAA 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(left, #FFAAAA 0%, #AAFFAA 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(left, #FFAAAA 0%, #AAFFAA 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFAAAA), color-stop(1, #AAFFAA));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(left, #FFAAAA 0%, #AAFFAA 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: linear-gradient(to right, #FFAAAA 0%, #AAFFAA 100%);
+        
+}
+.paySlider .marker {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -4px;
+  background-color: #fafafa;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(130, 137, 140, 0.83);
+  z-index: 3;
+  
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  
+}
+.paySlider .complete {
+  height: 100%;
+  width: auto;
+  background-color: transparent;
+  z-index: 2;
+  
+}
+.paySlider.vertical {
+  height: auto;
+  width: 12px;
+}
+.paySlider.vertical .complete {
+  position: absolute;
+  height: auto;
+  width: 20px;
+  bottom: 0;
+}
+.paySlider:hover .complete {
+  background-color: transparent;
+}
+.paySlider:active .complete,
+.paySlider:active + .marker:active .complete {
+  background-color: transparent;
+}
+
+
+
+
+#footer_follow {
+    
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    overflow: hidden;
+    
+}
+#footer_follow_inner {
+    
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    max-height: 20px;
+    overflow: hidden;
+    padding-left: 160px;
+    /*padding-right: 189px;*/
+    margin-right: 20px;
+    text-align: right;
+}
+
+#twitter_follow_container {
+    
+    display: inline-block;
+    position: relative;
+    max-height: 20px;    
+    width: 201px;
+    overflow: hidden;
+}

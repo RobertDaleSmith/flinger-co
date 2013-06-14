@@ -1,0 +1,2 @@
+Flinger Server running.
+- - - [Sat, 15 Jun 2013 03:44:12 GMT] "GET / HTTP/1.1" 404 - "-" "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.2; WOW64; Trident/6.0)"

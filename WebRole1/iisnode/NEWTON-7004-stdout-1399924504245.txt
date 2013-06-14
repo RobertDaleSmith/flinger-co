@@ -1,0 +1,6 @@
+Flinger Server running.
+- - - [Mon, 12 May 2014 19:55:11 GMT] "GET /WebRole1 HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1976.2 Safari/537.36"
+- - - [Mon, 12 May 2014 19:55:25 GMT] "GET /WebRole1/public/index.html HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1976.2 Safari/537.36"
+- - - [Mon, 12 May 2014 19:55:30 GMT] "GET /WebRole1/public/index.html HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1976.2 Safari/537.36"
+- - - [Mon, 12 May 2014 19:55:31 GMT] "GET /WebRole1/public/index.html HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1976.2 Safari/537.36"
+- - - [Mon, 12 May 2014 20:09:19 GMT] "GET /WebRole1/public/index.html HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1976.2 Safari/537.36"

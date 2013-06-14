@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Flinger Remote Ad1 Space</title>
+        <meta name="robots" content="noindex" />
+        <link rel="stylesheet" type="text/css" href="../style_ad.css">
+
+        <script type="text/javascript">
+
+            //This code can be run both in the head and body.
+
+            //Global variable that stores advertising banners.
+            var ads = new Array();
+
+            //Function that starts when the page finished loading.
+            window.onload = function () {
+                //Adds information about the new banners.
+                ads.push(["http://w3schools.com/css/default.asp", "valid-css.png", "CSS"]);
+                ads.push(["http://w3schools.com/xhtml/default.asp", "valid-xhtml.png", "XHTML"]);
+                ads.push(["http://w3schools.com/svg/default.asp", "valid-svg.png", "SVG"]);
+
+                //Starting rotation with the first banner.
+                ad_rotate(ads.length);
+            }
+
+            function ad_rotate(active) {
+                //Gets the div that will display banners.
+                var ad_element = document.getElementById("ad");
+
+
+                if (active <= ads.length) {
+                    //Prints a new link with image in advertising box.
+                    ad_element.innerHTML = "<a href=\"" + ads[active][0] + "\" target=\"_blank\"><img src=\"" + ads[active][1] + "\" alt=\"" + ads[active][2] + "\" title=\"" + ads[active][2] + "\" /></a>";
+                } 
+                //else if (active == ads.length) {
+                //    ad_element.innerHTML = "<iframe src='http://flinger.co/gad/' id='adblock_iframe'></iframe>";
+                //}
+
+                //Switches to the next banner.
+                active++;
+
+                //If the counter has reached the end, it shall start again from zero.
+                if (active >= ads.length) {
+                    active = 0;
+                }
+
+                //Run the function in 5000 milliseconds (5 seconds).
+                setTimeout("ad_rotate(" + active + ")", 5000);
+            }
+        </script>
+
+    </head>
+    <body>
+        <!-- This code is placed where the advertising banner will be -->
+        <div id="ad"> </div>
+    </body>
+</html>

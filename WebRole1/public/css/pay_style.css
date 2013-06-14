@@ -1,0 +1,117 @@
+
+html {
+            
+}
+h2 {
+font-size: 170%;
+}
+.emphasis {
+font-size: 157%;
+}
+.instructions {
+font-size: 93%;
+text-align: center;
+padding-bottom: 10px;
+    font-family: "Eurostile_LT_Demi_Oblique";
+color: #6b7679;
+}
+
+#payment-types {
+    text-align: center;
+}
+            
+#payout {
+font-size: 93%;
+width: 100%;
+}
+#not-paying {
+background-color: #ff8;
+margin: 5px;
+padding: 5px;
+border: 1px solid #bb4;
+}
+.big-label {
+    font-weight: bold;
+    display: block;
+font-size: 110%;
+}
+
+          
+h2#title {
+color: #62626c;
+font-weight: bold;
+margin-top: 0px; /* h2 by default puts our title way too low */
+margin-bottom: 15px; /* leave some space before the pitch */
+margin-left: -32px;
+}
+.call-to-action {
+font-size: 18px; /* absolute size, so it stays constant relative to buttons */
+color: green;
+}
+.caption {
+font-size: small; /* absolute size, so it stays constant relative to photo */
+font-style: italic;
+}
+#pay-controls {
+margin-top: 1em;
+}
+#a-table {
+/* Highlight the slider a bit; doesn't work in Safari (on Windows at least) */
+background: -webkit-radial-gradient(58% 36px, rgba(252,252,252,255), rgba(252,252,252,0) 200px);
+}
+#slider {
+width: 100%;
+height: 10px;
+display: none;
+-webkit-appearance: none !important; /* must do this to then style it */
+            
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(left, #FFAAAA 0%, #AAFFAA 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(left, #FFAAAA 0%, #AAFFAA 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(left, #FFAAAA 0%, #AAFFAA 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFAAAA), color-stop(1, #AAFFAA));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(left, #FFAAAA 0%, #AAFFAA 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to right, #FFAAAA 0%, #AAFFAA 100%);
+            
+            
+border: 0px inset white;
+            
+}
+
+            
+#amt-text {
+margin-left: -5px; /* hack to center it on the slider thumb pretty decently */
+padding-top: 10px; /* otherwise it touches the thumb */
+color: #6b7679;
+font-family: Helvetica, Arial, sans-serif;
+font-size: 20px;
+}
+.instructions {
+font-style: italic;
+color: #6b7679;
+font-family: "Eurostile_LT_Demi_Oblique";
+font-size: 14px;
+}
+#gift .why {
+display:none; /* they don't show till the slider reaches their level */
+/*margin-right: -4px;  so periods turn into ellipses */
+}
+#amt-text-row {
+font-size: medium; /* explicitly, regardless of the rest of the page */
+}
+
+#paypal-xclick-button {
+    width: 143px;
+    height: 41px;
+    border: 0px;
+}
