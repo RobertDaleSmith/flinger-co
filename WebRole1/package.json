@@ -1,1 +1,16 @@
-{"author":"","name":"WebRole1","version":"0.0.0","dependencies":{},"devDependencies":{},"optionalDependencies":{},"engines":{"node":"0.6.20","iisnode":"0.1.21"}}
+{
+  "author": "",
+  "name": "WebRole1",
+  "version": "0.0.0",
+  "dependencies": {
+    "browserchannel": "^2.1.0",
+    "connect": "2.30.2",
+    "share": "0.6.3"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "0.6.20",
+    "iisnode": "0.1.21"
+  }
+}

@@ -296,27 +296,28 @@ function onYouTubePlayerReady(playerId) {
 }
 
 //HTML5 - broken :(
-//function onYouTubeIframeAPIReady() {
-//    ytplayer = new YT.Player('ytplayer', {
-//        height: $(window).height(),
-//        width: $(window).width(),
-//        //videoId: 'u1zgFlCw8Aw',
-//        playerVars: {
-//            controls: '0',
-//            enablejsapi: '1',
-//            showinfo: '0',
-//            iv_load_policy: '3',
-//            rel: '0',
-//            modestbranding: '1',
-//            autoplay: '0'
-//        },
-//        events:
-//                    {
-//                        'onReady': onPlayerReady,
-//                        'onStateChange': onPlayerStateChange
-//                    }
-//    });
-//}
+function onYouTubeIframeAPIReady() {
+   ytplayer = new YT.Player('ytplayer', {
+       height: $(window).height(),
+       width: $(window).width(),
+       //videoId: 'u1zgFlCw8Aw',
+       playerVars: {
+           controls: '0',
+           enablejsapi: '1',
+           showinfo: '0',
+           iv_load_policy: '3',
+           rel: '0',
+           modestbranding: '1',
+           autoplay: '0'
+       },
+       events:
+                   {
+                       'onReady': onPlayerReady,
+                       'onStateChange': onPlayerStateChange
+                   }
+   });
+   ytHTML5ModeEnabled = true;
+}
 
 function onPlayerReady(event) {
     setInterval(updatePlayerInfo, 1000);
@@ -434,6 +435,7 @@ function updatePlayerInfo() {
             tempCurrentTime = parseInt(ytplayer.getCurrentTime().toFixed(0));
             tempDuration = parseInt(ytplayer.getDuration().toFixed(0));
         } catch (e) {};
+
         if (sessionActive && playerState == 1) {
             $('#new_channel_overlay').fadeOut('slow', function () {
                 document.getElementById('new_channel_overlay').style.display = "none";
@@ -442,6 +444,8 @@ function updatePlayerInfo() {
             completedWidth = ((tempCurrentTime * (seekBarWidth - markerWidth)) / tempDuration).toFixed(1);
             fractionLoaded = ytplayer.getVideoLoadedFraction();
             fractionLoadedWidth = ((fractionLoaded * (seekBarWidth)));
+
+
             if (prevCurrentTime != tempCurrentTime && getViewerIndex(viewerName) == 0)
                 $state.submitOp([{
                     p: ['screens', getViewerIndex(viewerName), 'currentTime'],
@@ -1676,7 +1680,7 @@ function openDocument(docName) {
         document.getElementById('data').style.opacity = 0;
     }
     var isChecking = true;
-    sharejs.open(docname, 'json', 'http://flinger.cloudapp.net/channel', function (error, shareDocument) {
+    sharejs.open(docname, 'json', 'http://'+window.location.host+'/channel', function (error, shareDocument) {
         $state = shareDocument;
         shareDocument.on('change', function (op) {
             $('#data').text(JSON.stringify($state.snapshot));
@@ -1844,7 +1848,9 @@ function stateUpdated() {
         $('#makeMainMenuBtn').addClass('makeMainMenuBtn');
         isMainScreen = false;
     }
+
     newPlayerState = JSON.stringify($state.at('screens').get()[getViewerIndex(viewerName)].state);
+
     if (playerState != newPlayerState) {
         playerState = newPlayerState;
         togglePlayButton();

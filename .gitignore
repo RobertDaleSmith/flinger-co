@@ -3,6 +3,7 @@ node_modules
 public/build/*.js
 config/development.json
 dev_conf.js
+WebRole1/build/
 # Compiled source #
 ###################
 *.com
