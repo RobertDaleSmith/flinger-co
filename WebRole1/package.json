@@ -10,8 +10,10 @@
   "devDependencies": {
     "fresh": ">=0.5.2",
     "mime": ">=1.4.1",
+    "morgan": ">=1.9.1",
     "negotiator": ">=0.6.1",
     "serve-static": ">=1.13.2",
+    "socket.io": ">=0.9.7",
     "uglify-js": ">=2.6.0"
   },
   "optionalDependencies": {},
