@@ -1682,6 +1682,9 @@ function openDocument(docName) {
     }
     isChecking = true;
     var serverUrl = window.location.protocol + '//' + window.location.host;
+    if (window.location.host.indexOf('localhost') === -1)  {
+        serverUrl = window.location.protocol + '//flinger-co.herokuapp.com';
+    }
     sharejs.open(docname, 'json', serverUrl + '/channel', function (error, shareDocument) {
         $state = shareDocument;
         shareDocument.on('change', function (op) {
