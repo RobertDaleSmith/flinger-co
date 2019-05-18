@@ -115,6 +115,7 @@ var prevChatLog = "",
 var isMainScreen = false;
 var connectAniActive = false;
 var animationInterval = null;
+var YT_API_KEY = "AIzaSyCdzF0CeKuj-_G70SjcFmO62A7i1RNK_ao";
 
 function connectAniLoop() {
     if (!connectAniActive) {
@@ -1910,34 +1911,44 @@ function loadVideoInfo(videoId) {
     if (document.getElementById("videoData"))
         removeElement("videoData");
     var gdata = document.createElement("script");
-    gdata.src = "https://gdata.youtube.com/feeds/api/videos/" + videoId + "?v=2&alt=jsonc&callback=storeVideoInfoTitle";
+    gdata.src = "https://www.googleapis.com/youtube/v3/videos?id=" + videoId + "&key=" + YT_API_KEY + "&part=snippet,statistics&callback=storeVideoInfoTitle";
     gdata.id = "videoData";
     var body = document.getElementsByTagName("body")[0];
     body.appendChild(gdata);
 };
 
 function storeVideoInfoTitle(info) {
-    consoleLog(info.data.title);
-    var uploadedDate = info.data.uploaded;
+    if (!(info && info.items && info.items.length)) return;
+
+    var result = info.items[0];
+    var snippet = result.snippet;
+    var statistics = result.statistics;
+
+    var uploadedDate = snippet.publishedAt;
     uploadedDate = uploadedDate.substring(0, 10).replace(/-/g, "/");
     document.getElementById("video_uploaded").innerHTML = uploadedDate;
-    document.getElementById("video_title").innerHTML = info.data.title;
-    var videoViewCount = info.data.viewCount + "";
+    document.getElementById("video_title").innerHTML = snippet.title;
+    var videoViewCount = statistics.viewCount + "";
     videoViewCount = videoViewCount.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
     document.getElementById("video_views").innerHTML = videoViewCount + " views";
     document.getElementById("video_provider").innerHTML = "YouTube";
+    document.getElementById("video_uploader").innerHTML = snippet.channelTitle;
     if (document.getElementById("channelData"))
         removeElement("channelData");
     var gdata2 = document.createElement("script");
-    gdata2.src = "https://gdata.youtube.com/feeds/api/users/" + info.data.uploader + "?v=2&alt=json&callback=storeVidInfoChannelThumb";
+    gdata2.src = "https://www.googleapis.com/youtube/v3/channels?id=" + snippet.channelId + "&key=" + YT_API_KEY + "&part=snippet&callback=storeVidInfoChannelThumb";
     gdata2.id = "channelData";
     var body = document.getElementsByTagName("body")[0];
     body.appendChild(gdata2);
 };
 
 function storeVidInfoChannelThumb(info) {
-    document.getElementById("video_thumb_image").src = info.entry.media$thumbnail.url;
-    document.getElementById("video_uploader").innerHTML = info.entry.yt$username.display;
+    if (!(info && info.items && info.items.length)) return;
+
+    var result = info.items[0];
+    var snippet = result.snippet;
+
+    document.getElementById("video_thumb_image").src = snippet.thumbnails.default.url;
 };
 
 function loadSlideInfo(slideUrl) {
