@@ -1,2 +1,0 @@
-Flinger Server running.
-- - - [Tue, 30 Apr 2013 13:34:33 GMT] "GET / HTTP/1.1" 200 81999 "-" "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)"

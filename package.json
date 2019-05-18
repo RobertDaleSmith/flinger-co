@@ -1,7 +1,7 @@
 {
   "author": "",
-  "name": "WebRole1",
-  "version": "0.0.0",
+  "name": "flinger-server",
+  "version": "0.0.19",
   "dependencies": {
     "browserchannel": "^2.1.0",
     "connect": "2.30.2",
@@ -19,6 +19,6 @@
   "optionalDependencies": {},
   "engines": {
     "node": "11.10.0",
-    "iisnode": "0.1.21"
+    "npm": "6.9.0"
   }
 }

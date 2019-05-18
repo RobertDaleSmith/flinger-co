@@ -1,1 +1,1 @@
-web: node WebRole1/server.js
+web: node server.js

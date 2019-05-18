@@ -1,1 +1,0 @@
-Publish-AzureServiceProject –ServiceName flinger –Location "West US” -Launch

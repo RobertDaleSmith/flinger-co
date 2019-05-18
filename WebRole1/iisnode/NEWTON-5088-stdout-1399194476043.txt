@@ -1,5 +1,0 @@
-Flinger Server running.
-- - - [Sun, 04 May 2014 09:07:59 GMT] "GET /WebRole1 HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
-- - - [Sun, 04 May 2014 09:08:05 GMT] "GET /WebRole1/public HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
-- - - [Sun, 04 May 2014 09:08:38 GMT] "GET /WebRole1/public/index.html HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
-- - - [Sun, 04 May 2014 09:09:13 GMT] "GET /WebRole1/public/index.html HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
