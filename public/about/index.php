@@ -3,16 +3,16 @@
 ?>
 
 <!DOCTYPE HTML>
-<!--       Developed by @RobertDaleSmith founder of @MoteLabs.           
-           ____    ___  @FlingerCo / founders@flinger.co                                                       
-          /\  _`\ /\_ \    __                                                             
+<!--       Developed by @RobertDaleSmith founder of @MoteLabs.
+           ____    ___  @FlingerCo / robert@motelabs.com
+          /\  _`\ /\_ \    __                                                  
           \ \ \L\_\//\ \  /\_\    ___      __      __   _ __      ___    ___   
            \ \  _\/ \ \ \ \/\ \ /' _ `\  /'_ `\  /'__`\/\`'__\   /'___\ / __`\ 
             \ \ \/   \_\ \_\ \ \/\ \/\ \/\ \L\ \/\  __/\ \ \/ __/\ \__//\ \L\ \
              \ \_\   /\____\\ \_\ \_\ \_\ \____ \ \____\\ \_\/\_\ \____\ \____/
               \/_/   \/____/ \/_/\/_/\/_/\/___L\ \/____/ \/_/\/_/\/____/\/___/ 
                                            /\____/                             
-                                           \_/__/                  (C)(TM)2013
+                                           \_/__/                  (C)(TM)2013 
 -->
 
 <html lang="en">
@@ -23,7 +23,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="title" 		  content="Flinger.co - Fling the Web Together" />
         <meta name="copyright" 	  content="MoteLabs.com - 2013" />
-        <meta name="email" 		  content="contact@flinger.co" />
+        <meta name="email" 		  content="robert@motelabs.com" />
         <meta name="description" content="Fling videos to any screen from any screen with Flinger.co" />
         <meta name="viewport" content="width=320, width=device-width, initial-scale=1, maximum-scale=1" /> <!-- This will force the device viewport to maintain the correct scale -->
         <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- This will remove the Safari web browsers address bar & bookmarks bar giving your web page a native appearance -->
@@ -31,28 +31,28 @@
         <link href="/css/style_pages.css" media="all" rel="stylesheet" type="text/css" />
         
         <!-- Opera Speed Dial Favicon -->
-        <link rel="icon" type="image/png" href="http://flinger.co/fav-icon-32.png" />
+        <link rel="icon" type="image/png" href="https://flinger.motelabs.com/fav-icon-32.png" />
         <!-- Standard Favicon -->
-        <link rel="icon" type="image/x-icon" href="http://flinger.co/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="https://flinger.motelabs.com/favicon.ico" />
         <!-- For iPhone 4 Retina display: -->
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://flinger.co/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://flinger.motelabs.com/apple-touch-icon-114x114-precomposed.png">
         <!-- For iPad: -->
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://flinger.co/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://flinger.motelabs.com/apple-touch-icon-72x72-precomposed.png">
         <!-- For iPhone: -->
-        <link rel="apple-touch-icon-precomposed" href="http://flinger.co/apple-touch-icon-57x57-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="https://flinger.motelabs.com/apple-touch-icon-57x57-precomposed.png">
         
         <meta property="fb:app_id" content="271277383008651" />
         <meta property="fb:admins" content="537257174" />  
         <meta property="og:title" content="Flinger.co - Blog" />
-        <meta property="og:url" content="http://flinger.co/about" >
+        <meta property="og:url" content="https://flinger.motelabs.com/about" >
         <meta property="og:site_name" content="Flinger.co" />
         <meta property="og:description" content="Fling videos to any screen from any screen with Flinger.co." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="http://flinger.co/icon_512.png" />
+        <meta property="og:image" content="https://flinger.motelabs.com/icon_512.png" />
 
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-        <script type="text/javascript" src="http://flinger.co/js/jquery.js"></script>
+        <script type="text/javascript" src="//flinger.motelabs.com/js/jquery.js"></script>
 
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -102,7 +102,7 @@
                     <br><br>
                     This past semester we were one of six teams selected to participate in the University of Houston's startup accelerator <a href="http://redlabs.bauer.uh.edu/" target="_blank">Red Labs</a>. 
                     Along with Red Labs, we also were accepted into the Microsoft Imagine Cup Student Accelerator. In March we were selected as one of the top fifteen teams in the US, and Microsoft 
-                    flew us out to Silicon Valley for an intense week long <a href="http://icsocialmediateam.com/2013/04/09/the-us-imagine-cup-startup-bootcamp-five-days-of-knowledge-experience-and-fun/" target="_blank">startup bootcamp</a>.
+                    flew us out to Silicon Valley for an intense week long <a href="https://web.archive.org/web/20130815004055/http://icsocialmediateam.com/2013/04/09/the-us-imagine-cup-startup-bootcamp-five-days-of-knowledge-experience-and-fun/" target="_blank">startup bootcamp</a>.
                     <br><br>
                     Over that week in Silicon Valley, Microsoft really pushed us to scale our idea to a much larger audience than only Google TVs. So we built Flinger.co, an entirely new platform that brings 
                     the best features of Chromemote to just about any TV and beyond just the Google TV platform.

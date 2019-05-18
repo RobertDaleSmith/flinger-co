@@ -44,13 +44,13 @@
             //Function that starts when the page finished loading.
             window.onload = function () {
                 //Adds information about the new banners.
-                ads.push(["https://zm4c63ce7.ting.com/", "http://flinger.co/ad/ad_ting_3.png", "Ting: Mobile That Make Sense", "ad_ting_3"]);
-                ads.push(["http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=flinger", "http://flinger.co/ad/ad_hostgator_4_250x60.gif", "HostGator: Host Unlimited Websites", "ad_hostgator_4"]);
-                ads.push(["http://chromemote.com/", "http://flinger.co/ad/ad_chromemote_2.png", "Chromemote: Google TV Remote for Chrome", "ad_chromemote_2"]);
-                ads.push(["http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=flinger", "http://flinger.co/ad/ad_hostgator_3_234x60.gif", "HostGator: Host Unlimited Websites", "ad_hostgator_3"]);
-                ads.push(["https://whimseybox.com/?r=g8b0c7m2", "http://flinger.co/ad/ad_whimsey_box.png", "Whimseybox: Monthly DIY", "ad_whimsey_box"]);
-                ads.push(["https://www.startupthreadsmonthly.com/?ref_id=etW3j", "http://flinger.co/ad/ad_startup_threads.png", "StartupThreads: Monthly Startup Swag", "ad_startup_threads"]);
-                ads.push(["http://flinger.co/advertise-on-flinger/", "http://flinger.co/ad/ad_vert_here.gif", "Advertise on Flinger.co", "ad_vert_here"]);
+                ads.push(["https://zm4c63ce7.ting.com/", "https://flinger.motelabs.com/ad/ad_ting_3.png", "Ting: Mobile That Make Sense", "ad_ting_3"]);
+                ads.push(["http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=flinger", "https://flinger.motelabs.com/ad/ad_hostgator_4_250x60.gif", "HostGator: Host Unlimited Websites", "ad_hostgator_4"]);
+                ads.push(["http://chromemote.com/", "https://flinger.motelabs.com/ad/ad_chromemote_2.png", "Chromemote: Google TV Remote for Chrome", "ad_chromemote_2"]);
+                ads.push(["http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=flinger", "https://flinger.motelabs.com/ad/ad_hostgator_3_234x60.gif", "HostGator: Host Unlimited Websites", "ad_hostgator_3"]);
+                ads.push(["https://whimseybox.com/?r=g8b0c7m2", "https://flinger.motelabs.com/ad/ad_whimsey_box.png", "Whimseybox: Monthly DIY", "ad_whimsey_box"]);
+                ads.push(["https://www.startupthreadsmonthly.com/?ref_id=etW3j", "https://flinger.motelabs.com/ad/ad_startup_threads.png", "StartupThreads: Monthly Startup Swag", "ad_startup_threads"]);
+                ads.push(["https://flinger.motelabs.com/advertise-on-flinger/", "https://flinger.motelabs.com/ad/ad_vert_here.gif", "Advertise on Flinger.co", "ad_vert_here"]);
 
                 //Starting rotation with the first banner.
                 min = 0;
@@ -89,10 +89,10 @@
                     ad_element.innerHTML = "<a href=\"" + ads[active][0] + "\" target=\"_blank\"><img src=\"" + ads[active][1] + "\" alt=\"" + ads[active][2] + "\" title=\"" + ads[active][2] + "\" id=\"" + ads[active][3] + "\" class=\"ad_image\" /></a>";
                     label = ads[active][3];
                 } else if (active == ads.length) {
-                    ad_element.innerHTML = "<iframe src='http://flinger.co/gad/' id='google_adsense' class='adblock_iframe'></iframe>";
+                    ad_element.innerHTML = "<iframe src='https://flinger.motelabs.com/gad/' id='google_adsense' class='adblock_iframe'></iframe>";
                     label = "google_adsense";
                 } else if (active == ads.length + 1) {
-                    ad_element.innerHTML = "<iframe src='http://flinger.co/gad/' id='google_adsense' class='adblock_iframe'></iframe>";
+                    ad_element.innerHTML = "<iframe src='https://flinger.motelabs.com/gad/' id='google_adsense' class='adblock_iframe'></iframe>";
                     label = "google_adsense";
                 } else if (active == max) {
                     ad_element.innerHTML = "<iframe src='http://rcm.amazon.com/e/cm?t=fliflitheweb-20&o=1&p=48&l=ur1&category=amazonvideoondemand&banner=0NV7S8PAP1Y8DYFGJC82&f=ifr' id='amazon_video' width='320' height='50' scrolling='no' border='0' marginwidth='0' style='border:none;' frameborder='0'></iframe>";

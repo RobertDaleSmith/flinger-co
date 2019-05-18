@@ -1,5 +1,5 @@
 /*         Developed by @RobertDaleSmith founder of @MoteLabs.           
-           ____    ___  @FlingerCo / founders@flinger.co                                                       
+           ____    ___  @FlingerCo / robert@motelabs.com
           /\  _`\ /\_ \    __                                                             
           \ \ \L\_\//\ \  /\_\    ___      __      __   _ __      ___    ___   
            \ \  _\/ \ \ \ \/\ \ /' _ `\  /'_ `\  /'__`\/\`'__\   /'___\ / __`\ 
@@ -179,7 +179,7 @@ window.onload = function () {
         window.open("https://chrome.google.com/webstore/detail/flingerco-remote/pnapfnfcbmjghcdklebipebankjhmdcc", "_blank")
     });
     $("#html_web_app_button").click(function () {
-        window.open("http://remote.flinger.co/", "_blank")
+        window.open("http://remote.flinger.motelabs.com/", "_blank")
     });
     $("#get_the_remote_btn").click(function () {
         var objDiv = document.getElementById("splash_main_content");
@@ -878,7 +878,7 @@ function onPageLoad() {
     resizePlayer($(window).width(), $(window).height());
     document.getElementById("channel_code_total").textContent = docname;
     document.getElementById("phone_code_hash").textContent = docname;
-    document.getElementById("phone_code_url").textContent = "flinger.co/#" + docname;
+    document.getElementById("phone_code_url").textContent = "flinger.motelabs.com/#" + docname;
     document.getElementById("hash_input").onkeypress = alphaFilterKeypress;
     $('#addressBar_favicon').hover(function () {
         if (!$("#addressBarTextArea").is(":focus")) {
@@ -1748,8 +1748,8 @@ function openDocument(docName) {
             consoleLog("Connected to " + docName);
             trackGAEvent("successful", "connect", docName);
             document.getElementById("status_container").textContent = "Successfully connected to " + docname + "!";
-            document.getElementById('invite_buttons_url').innerHTML = '<a href="http://flinger.co/#' + docname + '" target="_blank">flinger.co/#' + docname + '</a>';
-            document.getElementById('invite_buttons_url2').innerHTML = '<a href="http://remote.flinger.co/#' + docname + '" target="_blank">remote.flinger.co/#' + docname + '</a>';
+            document.getElementById('invite_buttons_url').innerHTML = '<a href="https://flinger.motelabs.com/#' + docname + '" target="_blank">flinger.motelabs.com/#' + docname + '</a>';
+            document.getElementById('invite_buttons_url2').innerHTML = '<a href="https://remote.flinger.motelabs.com/#' + docname + '" target="_blank">remote.flinger.motelabs.com/#' + docname + '</a>';
             prevConnection = true;
             prevHasTag = docName;
             $('#splash_container').fadeOut('slow', function () {
@@ -2099,15 +2099,15 @@ function lastSlideBtn() {
 }
 
 function inviteFacebookButton() {
-    open('http://www.facebook.com/share.php?u=http://flinger.co/%23' + docname, 'facebook', 'toolbar=no,width=700,height=300');
+    open('http://www.facebook.com/share.php?u=https://flinger.motelabs.com/%23' + docname, 'facebook', 'toolbar=no,width=700,height=300');
 }
 
 function inviteTwitterButton() {
-    open('http://twitter.com/share?text=Join%20Flinger%20Channel%20%23' + docname + '%20to%20watch%20and%20Fling%20videos%20with%20me%20%40flingerco&url=http://flinger.co/%23' + docname, 'twitter', 'toolbar=no,width=700,height=300');
+    open('http://twitter.com/share?text=Join%20Flinger%20Channel%20%23' + docname + '%20to%20watch%20and%20Fling%20videos%20with%20me%20%40flingerco&url=https://flinger.motelabs.com/%23' + docname, 'twitter', 'toolbar=no,width=700,height=300');
 }
 
 function inviteGooPlusButton() {
-    open('https://plus.google.com/share?url=http://flinger.co/%23' + docname, 'g-plus', 'toolbar=no,width=500,height=500');
+    open('https://plus.google.com/share?url=https://flinger.motelabs.com/%23' + docname, 'g-plus', 'toolbar=no,width=500,height=500');
 }
 UserVoice = window.UserVoice || [];
 
@@ -2151,7 +2151,7 @@ function startNewChannel() {
     document.getElementById('status_container').style.color = "#fff";
     document.getElementById('status_container').textContent = "Connecting to " + docname + "...";
     document.getElementById("phone_code_hash").textContent = docname;
-    document.getElementById("phone_code_url").textContent = "flinger.co/#" + docname;
+    document.getElementById("phone_code_url").textContent = "flinger.motelabs.com/#" + docname;
     document.getElementById("channel_code_total").textContent = docname;
 }
 
@@ -2174,7 +2174,7 @@ function connectToHash() {
         consoleLog("Opening user entered existing document Hash " + docname);
         openDocument(docname);
         document.getElementById("phone_code_hash").textContent = docname;
-        document.getElementById("phone_code_url").textContent = "flinger.co/#" + docname;
+        document.getElementById("phone_code_url").textContent = "flinger.motelabs.com/#" + docname;
         document.getElementById("channel_code_total").textContent = docname;
     }
 }

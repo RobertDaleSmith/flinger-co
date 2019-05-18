@@ -7,4 +7,4 @@
                 </div>
             </div>       
         </div>
-        <script src="http://flinger.co/js/responsive_pages.js"></script>
+        <script src="https://flinger.motelabs.com/js/responsive_pages.js"></script>

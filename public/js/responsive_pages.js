@@ -93,7 +93,7 @@ function makePageResponsive() {
         $('#twitter_social_link').css("right", 0);
 
     } else {
-        $('#social_container').css("background-image", "url('http://flinger.co/images_pages/social_quote_bg.png')");
+        $('#social_container').css("background-image", "url('https://flinger.motelabs.com/images_pages/social_quote_bg.png')");
         $('#latest_twitter_Tweet').css("left", 102);
         $('#latest_twitter_Tweet').css("width", bodyWidth - 275);
         $('#twitter_username_link').css("bottom", 20);

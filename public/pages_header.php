@@ -9,15 +9,15 @@
 	    </script>
 
         <div id="header_container">
-            <a href="http://flinger.co/"><img src="http://flinger.co/images_pages/flinger_pages_logo.png" alt="Flinger.co" id="flinger_pages_logo"></a>
+            <a href="https://flinger.motelabs.com/"><img src="https://flinger.motelabs.com/images_pages/flinger_pages_logo.png" alt="Flinger.co" id="flinger_pages_logo"></a>
             
             <div id="main_menu" class="header_menu">
-                <a href="http://flinger.co/"                      id="header_link_home"    >HOME</a>
-                <a href="http://blog.flinger.co/"                 id="header_link_blog"    >BLOG</a>
+                <a href="https://flinger.motelabs.com/"                      id="header_link_home"    >HOME</a>
+                <a href="https://flingerco.tumblr.com/"                 id="header_link_blog"    >BLOG</a>
                 <a href="http://flinger.uservoice.com/"           id="header_link_feedback">FEEDBACK</a>
-                <a href="http://flinger.co/advertise-on-flinger/" id="header_link_advert"  >ADVERTISE</a>
-                <a href="http://flinger.co/about/"                id="header_link_about"   >ABOUT</a>
-                <a href="http://flinger.co/support/"              id="header_link_support" >SUPPORT US</a>
+                <a href="https://flinger.motelabs.com/advertise-on-flinger/" id="header_link_advert"  >ADVERTISE</a>
+                <a href="https://flinger.motelabs.com/about/"                id="header_link_about"   >ABOUT</a>
+                <a href="https://flinger.motelabs.com/support/"              id="header_link_support" >SUPPORT US</a>
             </div>
                 
             <div id="main_menu_button"></div>
@@ -34,7 +34,7 @@
                 <a href="http://twitter.com/flingerco/" class="social_network_link" id="twitter_social_link" target="_blank" title="Follow us on Twitter"></a>
                 <div id="latest_twitter_Tweet">
                     <script>
-                        $.getJSON('http://flinger.co/tweets.php', function (info) {
+                        $.getJSON(window.location.protocol + '//flinger.motelabs.com/tweets.php', function (info) {
                             document.getElementById("latest_twitter_Tweet").innerHTML = '“'+info+'”';
                             makePageResponsive();
                         });

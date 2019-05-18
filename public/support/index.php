@@ -4,7 +4,7 @@
 
 <!DOCTYPE HTML>
 <!--       Developed by @RobertDaleSmith founder of @MoteLabs.           
-           ____    ___  @FlingerCo / founders@flinger.co                                                       
+           ____    ___  @FlingerCo / robert@motelabs.com
           /\  _`\ /\_ \    __                                                             
           \ \ \L\_\//\ \  /\_\    ___      __      __   _ __      ___    ___   
            \ \  _\/ \ \ \ \/\ \ /' _ `\  /'_ `\  /'__`\/\`'__\   /'___\ / __`\ 
@@ -23,7 +23,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="title" 		  content="Flinger.co - Support Us" />
         <meta name="copyright" 	  content="MoteLabs.com - 2013" />
-        <meta name="email" 		  content="contact@flinger.co" />
+        <meta name="email" 		  content="robert@motelabs.com" />
         <meta name="description" content="Become a Founding Member. The time to get in is NOW! We have a big dream and we have only just began to build it. Help fund our startup and we promise to build the most amazing second screen experiences to change the way you watch web content on any screen." />
         <meta name="viewport" content="width=320, width=device-width, initial-scale=1, maximum-scale=1" /> <!-- This will force the device viewport to maintain the correct scale -->
         <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- This will remove the Safari web browsers address bar & bookmarks bar giving your web page a native appearance -->
@@ -31,29 +31,29 @@
         <link href="/css/style_pages.css" media="all" rel="stylesheet" type="text/css" />
         
         <!-- Opera Speed Dial Favicon -->
-        <link rel="icon" type="image/png" href="http://flinger.co/fav-icon-32.png" />
+        <link rel="icon" type="image/png" href="https://flinger.motelabs.com/fav-icon-32.png" />
         <!-- Standard Favicon -->
-        <link rel="icon" type="image/x-icon" href="http://flinger.co/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="https://flinger.motelabs.com/favicon.ico" />
         <!-- For iPhone 4 Retina display: -->
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://flinger.co/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://flinger.motelabs.com/apple-touch-icon-114x114-precomposed.png">
         <!-- For iPad: -->
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://flinger.co/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://flinger.motelabs.com/apple-touch-icon-72x72-precomposed.png">
         <!-- For iPhone: -->
-        <link rel="apple-touch-icon-precomposed" href="http://flinger.co/apple-touch-icon-57x57-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="https://flinger.motelabs.com/apple-touch-icon-57x57-precomposed.png">
         
         <meta property="fb:app_id" content="271277383008651" />
         <meta property="fb:admins" content="537257174" />  
         <meta property="og:title" content="Flinger.co - Support Us" />
-        <meta property="og:url" content="http://flinger.co/support" >
+        <meta property="og:url" content="https://flinger.motelabs.com/support" >
         <meta property="og:site_name" content="Flinger.co - Support Us" />
         <meta property="og:description" content="Become a Founding Member. The time to get in is NOW! We have a big dream and we have only just began to build it. Help fund our startup and we promise to build the most amazing second screen experiences to change the way you watch web content on any screen." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="http://flinger.co/icon_512.png" />
+        <meta property="og:image" content="https://flinger.motelabs.com/icon_512.png" />
 
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-        <script type="text/javascript" src="http://flinger.co/js/jquery.js"></script>
-        <script type="text/javascript" src="http://flinger.co/js/slider.js"></script>
+        <script type="text/javascript" src="//flinger.motelabs.com/js/jquery.js"></script>
+        <script type="text/javascript" src="//flinger.motelabs.com/js/slider.js"></script>
 
         <link href="/css/pay_style.css" media="all" rel="stylesheet" type="text/css" />
         
@@ -142,8 +142,8 @@
                                     <input type="hidden" name="amount" id="amount-input">
                                     <input type="hidden" name="currency_code" value="USD">
                                     <input type="hidden" name="no_note" value="0">
-                                    <input type="hidden" name="return" value="http://flinger.co/support/thank-you/?src=paypal">
-                                    <input type="image" style="vertical-align: top" id="paypal-xclick-button" src="http://chromemote.com/wp-content/themes/wp-chromemote-3.0/images/paypal-xclick.png"/>
+                                    <input type="hidden" name="return" value="https://flinger.motelabs.com/support/thank-you/?src=paypal">
+                                    <input type="image" style="vertical-align: top" id="paypal-xclick-button" src="https://flinger.motelabs.com/images/paypal-xclick.png"/>
                   
 			                        <input type="hidden" name="cbt" value="Go Back To The Site" />
         		                    <input type="hidden" name="no_shipping" value="1" />
