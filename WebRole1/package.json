@@ -7,7 +7,13 @@
     "connect": "2.30.2",
     "share": "0.6.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "fresh": ">=0.5.2",
+    "mime": ">=1.4.1",
+    "negotiator": ">=0.6.1",
+    "serve-static": ">=1.13.2",
+    "uglify-js": ">=2.6.0"
+  },
   "optionalDependencies": {},
   "engines": {
     "node": "0.6.20",
