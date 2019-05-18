@@ -13,7 +13,7 @@
             
             <div id="main_menu" class="header_menu">
                 <a href="https://flinger.motelabs.com/"                      id="header_link_home"    >HOME</a>
-                <a href="https://flingerco.tumblr.com/"                 id="header_link_blog"    >BLOG</a>
+                <a href="http://blog.flinger.motelabs.com/"                 id="header_link_blog"    >BLOG</a>
                 <a href="http://flinger.uservoice.com/"           id="header_link_feedback">FEEDBACK</a>
                 <a href="https://flinger.motelabs.com/advertise-on-flinger/" id="header_link_advert"  >ADVERTISE</a>
                 <a href="https://flinger.motelabs.com/about/"                id="header_link_about"   >ABOUT</a>
