@@ -179,7 +179,7 @@ window.onload = function () {
         window.open("https://chrome.google.com/webstore/detail/flingerco-remote/pnapfnfcbmjghcdklebipebankjhmdcc", "_blank")
     });
     $("#html_web_app_button").click(function () {
-        window.open("http://remote.flinger.motelabs.com/", "_blank")
+        window.open("https://remote.flinger.motelabs.com/", "_blank")
     });
     $("#get_the_remote_btn").click(function () {
         var objDiv = document.getElementById("splash_main_content");
