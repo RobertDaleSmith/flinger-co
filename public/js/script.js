@@ -1679,8 +1679,9 @@ function openDocument(docName) {
         document.getElementById('data').style.zIndex = -1;
         document.getElementById('data').style.opacity = 0;
     }
-    var isChecking = true;
-    sharejs.open(docname, 'json', 'http://'+window.location.host+'/channel', function (error, shareDocument) {
+    isChecking = true;
+    var serverUrl = window.location.protocol + '//' + window.location.host;
+    sharejs.open(docname, 'json', serverUrl + '/channel', function (error, shareDocument) {
         $state = shareDocument;
         shareDocument.on('change', function (op) {
             $('#data').text(JSON.stringify($state.snapshot));
