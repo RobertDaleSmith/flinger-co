@@ -1,10 +1,11 @@
 {
   "author": "",
-  "name": "flinger-server",
+  "name": "flinger-co",
   "version": "0.0.19",
   "dependencies": {
     "browserchannel": "^2.1.0",
     "connect": "2.30.2",
+    "serve-static": ">=1.13.2",
     "share": "0.6.3"
   },
   "devDependencies": {
