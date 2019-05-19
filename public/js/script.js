@@ -875,6 +875,11 @@ function getCurrentSlide() {
 }
 
 function onPageLoad() {
+    if (docname !== docname.toLowerCase()) {
+        docname = docname.toLowerCase();
+        window.location.hash = docname;
+    }
+
     resizePlayer($(window).width(), $(window).height());
     document.getElementById("channel_code_total").textContent = docname;
     document.getElementById("phone_code_hash").textContent = docname;
@@ -2157,6 +2162,7 @@ function startNewChannel() {
 
 function connectToHash() {
     docname = document.getElementById("hash_input").value;
+    if (typeof docname === "string") docname = docname.toLowerCase();
     if (docname.length != 6) {
         document.getElementById('status_container').textContent = "6 digit alphanumeric code only";
         setTimeout(function () {
