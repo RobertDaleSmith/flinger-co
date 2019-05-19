@@ -1234,8 +1234,10 @@ function videoEnded() {
         }
     }
 };
+
 var queCount;
-var removeFromQue = function (timeStamp) {
+
+function removeFromQue(timeStamp) {
     var queObject;
     try {
         queObject = $state.at('que').get();
