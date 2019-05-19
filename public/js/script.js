@@ -1456,8 +1456,15 @@ function showHideHUD(pageX, pageY, seconds) {
 }
 
 function uid() {
-    return ("" + (Math.random() * Math.pow(36, 6) << 0).toString(36)).substr(-6)
-};
+    var randomId = ("" + (Math.random() * Math.pow(36, 6) << 0).toString(36)).substr(-6);
+    if (randomId.length < 6) {
+        var delta = 6 - randomId.length;
+        for (var i=0; i < delta; i++){
+            randomId = randomId + i;
+        }
+    }
+    return randomId;
+}
 
 function keyCodeUid() {
     return ("" + (Math.random() * Math.pow(36, 8) << 0)).substr(-8);
